@@ -21,4 +21,5 @@ const Calc = ({value, onClickIncr, onClickDecr, onClickPlus, onClickMinus}) => {
 //   onClickMinus: PropTypes.func.isRequired
 // }
 
+
 export default Calc;
