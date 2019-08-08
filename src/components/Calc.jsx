@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Calc = ({value, onClickIncr, onClickDecr, onClickPlus, onClickMinus}) => {
   return (
@@ -13,13 +13,13 @@ const Calc = ({value, onClickIncr, onClickDecr, onClickPlus, onClickMinus}) => {
   );
 }
 
-// Calc.propTypes = {
-//   value: PropTypes.number.isRequired,
-//   onClickIncr: PropTypes.func.isRequired, 
-//   onClickDecr: PropTypes.func.isRequired,
-//   onClickPlus: PropTypes.func.isRequired,
-//   onClickMinus: PropTypes.func.isRequired
-// }
+Calc.propTypes = {
+  value: PropTypes.number.isRequired,
+  onClickIncr: PropTypes.func.isRequired, 
+  onClickDecr: PropTypes.func.isRequired,
+  onClickPlus: PropTypes.func.isRequired,
+  onClickMinus: PropTypes.func.isRequired
+}
 
 
 export default Calc;
