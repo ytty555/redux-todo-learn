@@ -1,4 +1,4 @@
-function reducer(state = {value: 0}, action) {
+function reducer(state = {value: 100}, action) {
   switch (action.type) {
     case 'INCR':
       return state.value + 1;

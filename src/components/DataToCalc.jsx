@@ -1,6 +1,7 @@
 import React from "react";
 import Calc from "./Calc";
-import {connect} from 'react-redux';
+import { connect } from "react-redux";
+import { increment } from "../actions";
 
 class DataToCalc extends React.Component {
   constructor(props) {
@@ -8,7 +9,7 @@ class DataToCalc extends React.Component {
   }
 
   render() {
-    return <Calc value={this.props.value}/>;
+    return <Calc value={this.props.value} onClickIncr={increment()} />;
   }
 }
 
@@ -18,4 +19,13 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(DataToCalc);
+function mapDispatchToProps(dispatch) {
+  return {
+    increment: () => dispatch(increment())
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(DataToCalc);
