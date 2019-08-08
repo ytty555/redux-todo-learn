@@ -1,9 +1,11 @@
-import React from 'react';
+import React from "react";
+import DataToCalc from "./components/DataToCalc";
 
 function App() {
   return (
-    <div className="App">
-      <p>App</p>
+    <div>
+      <h1>Мини-калькулятор</h1>
+      <DataToCalc />
     </div>
   );
 }
